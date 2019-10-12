@@ -1,7 +1,7 @@
 # GitHub Action: Run credo with reviewdog
 
-[![Docker Image CI](https://github.com/hauleth/reviewdog-action-credo/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/hauleth/reviewdog-action-credo/actions)
-[![Release](https://img.shields.io/github/release/hauleth/reviewdog-action-credo.svg?maxAge=43200)](https://github.com/hauleth/reviewdog-action-credo/releases)
+[![Docker Image CI](https://github.com/red-shirts/reviewdog-action-credo/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/red-shirts/reviewdog-action-credo/actions)
+[![Release](https://img.shields.io/github/release/red-shirts/reviewdog-action-credo.svg?maxAge=43200)](https://github.com/red-shirts/reviewdog-action-credo/releases)
 
 This action runs [credo](https://github.com/rrrene/credo) with
 [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve
@@ -45,7 +45,7 @@ jobs:
           mix local.hex --force
           mix deps.get
       - name: credo
-        uses: hauleth/reviewdog-action-credo@v1
+        uses: red-shirts/reviewdog-action-credo@v1
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review # Change reporter.
