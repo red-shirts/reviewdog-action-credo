@@ -15,11 +15,11 @@ jobs:
           mix local.hex --force
           mix deps.get
       - name: credo
-        uses: red-shirts/reviewdog-action-credo@v1
+        uses: ./
         with:
           github_token: ${{ secrets.github_token }}
       - name: credo-pr-review
-        uses: red-shirts/reviewdog-action-credo@v1
+        uses: ./
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
