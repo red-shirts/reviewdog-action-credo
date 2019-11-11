@@ -5,6 +5,8 @@ RUN apk --update add git && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
 
+RUN mix do archive.install github rrrene/bunt, archive.install github rrrene/credo
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

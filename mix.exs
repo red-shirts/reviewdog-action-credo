@@ -4,13 +4,7 @@ defmodule ReviewdogCredo.Mixfile do
   def project do
     [
       app: :reviewdog_credo,
-      deps: deps()
-    ]
-  end
-
-  defp deps do
-    [
-      {:credo, ">= 0.0.0"}
+      deps: []
     ]
   end
 end
