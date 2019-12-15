@@ -4,6 +4,7 @@ defmodule ReviewdogCredo.Mixfile do
   def project do
     [
       app: :reviewdog_credo,
+      version: "0.0.1",
       deps: []
     ]
   end

@@ -5,11 +5,11 @@ RUN apk --update add git && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
 
-ENV MIX_ARCHIVES /opt/archives
+ENV MIX_HOME /var/mix
 
-RUN mix do local.hex --force, \
-           archive.install --force github rrrene/bunt, \
-           archive.install --force github rrrene/credo
+RUN mix local.hex --force && \
+    mix archive.install --force github rrrene/bunt && \
+    mix archive.install --force github rrrene/credo
 
 COPY entrypoint.sh /entrypoint.sh
 
