@@ -36,9 +36,9 @@ jobs:
     name: runner / credo
     runs-on: ubuntu-latest
     container:
-      image: elixir:1.9.1-slim
+      image: elixir:1.12-slim
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Install Dependencies
         run: |
           mix local.rebar --force
