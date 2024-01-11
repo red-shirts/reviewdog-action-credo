@@ -6,9 +6,9 @@ ARG BUILDER_IMAGE="hexpm/elixir:${ELIXIR_VERSION}-erlang-${OTP_VERSION}-debian-$
 
 FROM ${BUILDER_IMAGE}
 
-RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b /usr/local/bin/ v0.16.0
-RUN apt-get update -y && apt-get install -y git \
+RUN apt-get update -y && apt-get install -y git wget \
     && apt-get clean && rm -f /var/lib/apt/lists/*_*
+RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b /usr/local/bin/ v0.16.0
 
 ENV MIX_HOME /var/mix
 
